@@ -1,0 +1,11 @@
+{
+    "dataset_avaliado": "data/events.csv",
+    "metricas_algoritmicas": {
+        "consistencia_percentagem": 100.0,
+        "completude_percentagem": 64.4,
+        "cobertura_saudavel_percentagem": 64.4,
+        "total_trajetorias_recuperadas": 10583,
+        "anomalias_e_zombies_filtrados": 5849
+    },
+    "status": "PASS: O sistema cumpriu as regras de negocio topologicas."
+}

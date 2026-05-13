@@ -1,0 +1,1108 @@
+{
+    "trafego": {
+        "tempo_medio_visita_segundos": 2967.74,
+        "tempo_medio_visita_minutos": 49.46,
+        "afluencia_diaria": {
+            "2025-03-10": {
+                "total_dia": 1746,
+                "por_hora": {
+                    "9h": 71,
+                    "10h": 102,
+                    "11h": 145,
+                    "12h": 168,
+                    "13h": 155,
+                    "14h": 127,
+                    "15h": 123,
+                    "16h": 159,
+                    "17h": 195,
+                    "18h": 191,
+                    "19h": 180,
+                    "20h": 101,
+                    "21h": 29
+                }
+            },
+            "2025-03-11": {
+                "total_dia": 1570,
+                "por_hora": {
+                    "9h": 82,
+                    "10h": 97,
+                    "11h": 154,
+                    "12h": 179,
+                    "13h": 149,
+                    "14h": 138,
+                    "15h": 97,
+                    "16h": 122,
+                    "17h": 175,
+                    "18h": 154,
+                    "19h": 140,
+                    "20h": 65,
+                    "21h": 18
+                }
+            },
+            "2025-03-12": {
+                "total_dia": 1859,
+                "por_hora": {
+                    "9h": 113,
+                    "10h": 134,
+                    "11h": 154,
+                    "12h": 191,
+                    "13h": 195,
+                    "14h": 140,
+                    "15h": 100,
+                    "16h": 147,
+                    "17h": 206,
+                    "18h": 184,
+                    "19h": 152,
+                    "20h": 106,
+                    "21h": 37
+                }
+            },
+            "2025-03-13": {
+                "total_dia": 1928,
+                "por_hora": {
+                    "9h": 96,
+                    "10h": 139,
+                    "11h": 166,
+                    "12h": 194,
+                    "13h": 180,
+                    "14h": 140,
+                    "15h": 140,
+                    "16h": 150,
+                    "17h": 239,
+                    "18h": 171,
+                    "19h": 167,
+                    "20h": 121,
+                    "21h": 25
+                }
+            },
+            "2025-03-14": {
+                "total_dia": 1903,
+                "por_hora": {
+                    "9h": 65,
+                    "10h": 143,
+                    "11h": 172,
+                    "12h": 203,
+                    "13h": 196,
+                    "14h": 134,
+                    "15h": 137,
+                    "16h": 170,
+                    "17h": 196,
+                    "18h": 166,
+                    "19h": 154,
+                    "20h": 131,
+                    "21h": 36
+                }
+            },
+            "2025-03-15": {
+                "total_dia": 2392,
+                "por_hora": {
+                    "9h": 71,
+                    "10h": 129,
+                    "11h": 190,
+                    "12h": 208,
+                    "13h": 240,
+                    "14h": 240,
+                    "15h": 235,
+                    "16h": 198,
+                    "17h": 191,
+                    "18h": 245,
+                    "19h": 230,
+                    "20h": 171,
+                    "21h": 44
+                }
+            },
+            "2025-03-16": {
+                "total_dia": 2178,
+                "por_hora": {
+                    "9h": 67,
+                    "10h": 138,
+                    "11h": 184,
+                    "12h": 213,
+                    "13h": 238,
+                    "14h": 215,
+                    "15h": 172,
+                    "16h": 141,
+                    "17h": 200,
+                    "18h": 206,
+                    "19h": 202,
+                    "20h": 141,
+                    "21h": 61
+                }
+            }
+        }
+    },
+    "funil": {
+        "total_visitantes_loja": 10583,
+        "total_compradores": 10488,
+        "taxa_conversao_percentagem": 99.1,
+        "visitantes_por_zona": {
+            "Z_C1": 7877,
+            "Z_C2": 8712,
+            "Z_C3": 6228,
+            "Z_CK": 3429,
+            "Z_E1": 4497,
+            "Z_E2": 4146,
+            "Z_N1": 569,
+            "Z_N10": 312,
+            "Z_N2": 484,
+            "Z_N3": 401,
+            "Z_N4": 222,
+            "Z_N5": 382,
+            "Z_N6": 313,
+            "Z_N7": 240,
+            "Z_N8": 322,
+            "Z_N9": 293,
+            "Z_S1": 187,
+            "Z_S2": 111,
+            "Z_S3": 231,
+            "Z_S4": 155,
+            "Z_S5": 239,
+            "Z_S6": 149,
+            "Z_S7": 103
+        },
+        "perfil_abandono": {
+            "total_perdidos": 95,
+            "genero_maioritario": "F",
+            "idade_maioritaria": "adult"
+        }
+    },
+    "zonas": {
+        "estatisticas_por_zona": {
+            "Z_E2": {
+                "visitantes_totais": 4146,
+                "dwell_time_medio_s": 16.68,
+                "taxa_paragem_percentagem": 67.8
+            },
+            "Z_C2": {
+                "visitantes_totais": 8712,
+                "dwell_time_medio_s": 31.66,
+                "taxa_paragem_percentagem": 88.56
+            },
+            "Z_C3": {
+                "visitantes_totais": 6228,
+                "dwell_time_medio_s": 29.03,
+                "taxa_paragem_percentagem": 86.19
+            },
+            "Z_C1": {
+                "visitantes_totais": 7877,
+                "dwell_time_medio_s": 31.52,
+                "taxa_paragem_percentagem": 87.38
+            },
+            "Z_E1": {
+                "visitantes_totais": 4497,
+                "dwell_time_medio_s": 16.7,
+                "taxa_paragem_percentagem": 67.87
+            },
+            "Z_N10": {
+                "visitantes_totais": 312,
+                "dwell_time_medio_s": 248.4,
+                "taxa_paragem_percentagem": 85.58
+            },
+            "Z_S4": {
+                "visitantes_totais": 155,
+                "dwell_time_medio_s": 234.1,
+                "taxa_paragem_percentagem": 89.03
+            },
+            "Z_N5": {
+                "visitantes_totais": 382,
+                "dwell_time_medio_s": 261.29,
+                "taxa_paragem_percentagem": 85.86
+            },
+            "Z_N6": {
+                "visitantes_totais": 313,
+                "dwell_time_medio_s": 241.65,
+                "taxa_paragem_percentagem": 87.22
+            },
+            "Z_S5": {
+                "visitantes_totais": 239,
+                "dwell_time_medio_s": 124.22,
+                "taxa_paragem_percentagem": 95.82
+            },
+            "Z_N9": {
+                "visitantes_totais": 293,
+                "dwell_time_medio_s": 244.56,
+                "taxa_paragem_percentagem": 87.71
+            },
+            "Z_CK": {
+                "visitantes_totais": 3429,
+                "dwell_time_medio_s": 253.93,
+                "taxa_paragem_percentagem": 79.06
+            },
+            "Z_N1": {
+                "visitantes_totais": 569,
+                "dwell_time_medio_s": 244.76,
+                "taxa_paragem_percentagem": 90.16
+            },
+            "Z_S6": {
+                "visitantes_totais": 149,
+                "dwell_time_medio_s": 230.68,
+                "taxa_paragem_percentagem": 92.62
+            },
+            "Z_N3": {
+                "visitantes_totais": 401,
+                "dwell_time_medio_s": 257.41,
+                "taxa_paragem_percentagem": 90.27
+            },
+            "Z_N2": {
+                "visitantes_totais": 484,
+                "dwell_time_medio_s": 249.8,
+                "taxa_paragem_percentagem": 86.16
+            },
+            "Z_N4": {
+                "visitantes_totais": 222,
+                "dwell_time_medio_s": 249.49,
+                "taxa_paragem_percentagem": 88.74
+            },
+            "Z_S3": {
+                "visitantes_totais": 231,
+                "dwell_time_medio_s": 237.62,
+                "taxa_paragem_percentagem": 87.01
+            },
+            "Z_N8": {
+                "visitantes_totais": 322,
+                "dwell_time_medio_s": 238.54,
+                "taxa_paragem_percentagem": 86.02
+            },
+            "Z_S1": {
+                "visitantes_totais": 187,
+                "dwell_time_medio_s": 204.56,
+                "taxa_paragem_percentagem": 93.58
+            },
+            "Z_S2": {
+                "visitantes_totais": 111,
+                "dwell_time_medio_s": 252.89,
+                "taxa_paragem_percentagem": 92.79
+            },
+            "Z_N7": {
+                "visitantes_totais": 240,
+                "dwell_time_medio_s": 248.37,
+                "taxa_paragem_percentagem": 87.08
+            },
+            "Z_S7": {
+                "visitantes_totais": 103,
+                "dwell_time_medio_s": 224.51,
+                "taxa_paragem_percentagem": 94.17
+            }
+        },
+        "top_10_rotas_frequentes": {
+            "Z_E2 -> Z_C2 -> Z_C3": 653,
+            "Z_E1 -> Z_C1 -> Z_C2 -> Z_C3": 605,
+            "Z_E2 -> Z_C3": 426,
+            "Z_E2 -> Z_C2 -> Z_C1": 283,
+            "Z_E1 -> Z_C1": 279,
+            "Z_E1 -> Z_C2 -> Z_C3": 253,
+            "Z_E2 -> Z_C2 -> Z_C1 -> Z_CK": 238,
+            "Z_E1 -> Z_C1 -> Z_CK": 234,
+            "Z_E1 -> Z_C1 -> Z_C2 -> Z_C1": 232,
+            "Z_E1 -> Z_C2 -> Z_C1": 184
+        }
+    },
+    "demografia": {
+        "distribuicao_por_hora": {
+            "9h": {
+                "F_adult": 58,
+                "F_child": 57,
+                "F_middle_aged": 56,
+                "F_senior": 48,
+                "F_teenager": 16,
+                "F_young_adult": 44,
+                "M_adult": 78,
+                "M_child": 19,
+                "M_middle_aged": 61,
+                "M_senior": 44,
+                "M_teenager": 26,
+                "M_young_adult": 57
+            },
+            "10h": {
+                "F_adult": 109,
+                "F_child": 69,
+                "F_middle_aged": 80,
+                "F_senior": 51,
+                "F_teenager": 40,
+                "F_young_adult": 93,
+                "M_adult": 123,
+                "M_child": 35,
+                "M_middle_aged": 115,
+                "M_senior": 77,
+                "M_teenager": 32,
+                "M_young_adult": 56
+            },
+            "11h": {
+                "F_adult": 141,
+                "F_child": 114,
+                "F_middle_aged": 126,
+                "F_senior": 42,
+                "F_teenager": 54,
+                "F_young_adult": 111,
+                "M_adult": 130,
+                "M_child": 50,
+                "M_middle_aged": 133,
+                "M_senior": 99,
+                "M_teenager": 62,
+                "M_young_adult": 93
+            },
+            "12h": {
+                "F_adult": 167,
+                "F_child": 118,
+                "F_middle_aged": 162,
+                "F_senior": 89,
+                "F_teenager": 45,
+                "F_young_adult": 101,
+                "M_adult": 173,
+                "M_child": 80,
+                "M_middle_aged": 146,
+                "M_senior": 79,
+                "M_teenager": 77,
+                "M_young_adult": 112
+            },
+            "13h": {
+                "F_adult": 170,
+                "F_child": 112,
+                "F_middle_aged": 140,
+                "F_senior": 85,
+                "F_teenager": 43,
+                "F_young_adult": 112,
+                "M_adult": 163,
+                "M_child": 62,
+                "M_middle_aged": 179,
+                "M_senior": 79,
+                "M_teenager": 63,
+                "M_young_adult": 138
+            },
+            "14h": {
+                "F_adult": 133,
+                "F_child": 94,
+                "F_middle_aged": 119,
+                "F_senior": 51,
+                "F_teenager": 28,
+                "F_young_adult": 108,
+                "M_adult": 156,
+                "M_child": 52,
+                "M_middle_aged": 171,
+                "M_senior": 65,
+                "M_teenager": 56,
+                "M_young_adult": 96
+            },
+            "15h": {
+                "F_adult": 114,
+                "F_child": 85,
+                "F_middle_aged": 116,
+                "F_senior": 61,
+                "F_teenager": 30,
+                "F_young_adult": 89,
+                "M_adult": 127,
+                "M_child": 29,
+                "M_middle_aged": 124,
+                "M_senior": 68,
+                "M_teenager": 57,
+                "M_young_adult": 101
+            },
+            "16h": {
+                "F_adult": 125,
+                "F_child": 72,
+                "F_middle_aged": 141,
+                "F_senior": 64,
+                "F_teenager": 49,
+                "F_young_adult": 112,
+                "M_adult": 143,
+                "M_child": 31,
+                "M_middle_aged": 107,
+                "M_senior": 69,
+                "M_teenager": 49,
+                "M_young_adult": 123
+            },
+            "17h": {
+                "F_adult": 168,
+                "F_child": 117,
+                "F_middle_aged": 133,
+                "F_senior": 95,
+                "F_teenager": 59,
+                "F_young_adult": 127,
+                "M_adult": 141,
+                "M_child": 53,
+                "M_middle_aged": 151,
+                "M_senior": 86,
+                "M_teenager": 120,
+                "M_young_adult": 147
+            },
+            "18h": {
+                "F_adult": 180,
+                "F_child": 72,
+                "F_middle_aged": 138,
+                "F_senior": 91,
+                "F_teenager": 52,
+                "F_young_adult": 106,
+                "M_adult": 163,
+                "M_child": 70,
+                "M_middle_aged": 181,
+                "M_senior": 78,
+                "M_teenager": 56,
+                "M_young_adult": 122
+            },
+            "19h": {
+                "F_adult": 168,
+                "F_child": 112,
+                "F_middle_aged": 119,
+                "F_senior": 54,
+                "F_teenager": 37,
+                "F_young_adult": 121,
+                "M_adult": 133,
+                "M_child": 50,
+                "M_middle_aged": 179,
+                "M_senior": 88,
+                "M_teenager": 49,
+                "M_young_adult": 107
+            },
+            "20h": {
+                "F_adult": 118,
+                "F_child": 82,
+                "F_middle_aged": 85,
+                "F_senior": 45,
+                "F_teenager": 23,
+                "F_young_adult": 69,
+                "M_adult": 102,
+                "M_child": 32,
+                "M_middle_aged": 104,
+                "M_senior": 38,
+                "M_teenager": 36,
+                "M_young_adult": 97
+            },
+            "21h": {
+                "F_adult": 27,
+                "F_child": 5,
+                "F_middle_aged": 35,
+                "F_senior": 12,
+                "F_teenager": 8,
+                "F_young_adult": 23,
+                "M_adult": 49,
+                "M_child": 12,
+                "M_middle_aged": 26,
+                "M_senior": 15,
+                "M_teenager": 15,
+                "M_young_adult": 23
+            }
+        },
+        "dwell_medio_por_segmento_e_zona": {
+            "Z_C1": {
+                "F_adult": 33.52,
+                "F_child": 27.93,
+                "F_middle_aged": 31.74,
+                "F_senior": 30.07,
+                "F_teenager": 33.09,
+                "F_young_adult": 29.64,
+                "M_adult": 33.73,
+                "M_child": 26.36,
+                "M_middle_aged": 32.88,
+                "M_senior": 28.17,
+                "M_teenager": 28.07,
+                "M_young_adult": 31.49
+            },
+            "Z_C2": {
+                "F_adult": 33.9,
+                "F_child": 28.18,
+                "F_middle_aged": 32.7,
+                "F_senior": 29.57,
+                "F_teenager": 30.93,
+                "F_young_adult": 30.69,
+                "M_adult": 34.18,
+                "M_child": 27.64,
+                "M_middle_aged": 32.34,
+                "M_senior": 27.54,
+                "M_teenager": 27.81,
+                "M_young_adult": 30.47
+            },
+            "Z_C3": {
+                "F_adult": 30.59,
+                "F_child": 25.11,
+                "F_middle_aged": 29.57,
+                "F_senior": 28.06,
+                "F_teenager": 29.11,
+                "F_young_adult": 27.62,
+                "M_adult": 31.23,
+                "M_child": 25.81,
+                "M_middle_aged": 29.55,
+                "M_senior": 25.9,
+                "M_teenager": 27.29,
+                "M_young_adult": 28.59
+            },
+            "Z_CK": {
+                "F_adult": 276.88,
+                "F_child": 236.5,
+                "F_middle_aged": 244.94,
+                "F_senior": 245.59,
+                "F_teenager": 227.53,
+                "F_young_adult": 240.62,
+                "M_adult": 283.25,
+                "M_child": 224.45,
+                "M_middle_aged": 257.53,
+                "M_senior": 214.97,
+                "M_teenager": 232.44,
+                "M_young_adult": 263.28
+            },
+            "Z_E1": {
+                "F_adult": 16.7,
+                "F_child": 17.2,
+                "F_middle_aged": 16.6,
+                "F_senior": 16.87,
+                "F_teenager": 16.8,
+                "F_young_adult": 16.37,
+                "M_adult": 16.74,
+                "M_child": 15.94,
+                "M_middle_aged": 16.77,
+                "M_senior": 16.7,
+                "M_teenager": 17.09,
+                "M_young_adult": 16.85
+            },
+            "Z_E2": {
+                "F_adult": 17.15,
+                "F_child": 16.6,
+                "F_middle_aged": 16.81,
+                "F_senior": 16.71,
+                "F_teenager": 16.64,
+                "F_young_adult": 16.38,
+                "M_adult": 16.68,
+                "M_child": 15.94,
+                "M_middle_aged": 16.51,
+                "M_senior": 16.5,
+                "M_teenager": 16.49,
+                "M_young_adult": 16.86
+            },
+            "Z_N1": {
+                "F_adult": 269.82,
+                "F_child": 160.15,
+                "F_middle_aged": 279.32,
+                "F_senior": 259.37,
+                "F_teenager": 190.57,
+                "F_young_adult": 189.2,
+                "M_adult": 268.9,
+                "M_child": 133.6,
+                "M_middle_aged": 248.8,
+                "M_senior": 251.0,
+                "M_teenager": 214.77,
+                "M_young_adult": 236.95
+            },
+            "Z_N10": {
+                "F_adult": 208.69,
+                "F_child": 188.86,
+                "F_middle_aged": 357.1,
+                "F_senior": 204.06,
+                "F_teenager": 279.33,
+                "F_young_adult": 222.03,
+                "M_adult": 259.72,
+                "M_child": 202.3,
+                "M_middle_aged": 240.05,
+                "M_senior": 163.55,
+                "M_teenager": 315.29,
+                "M_young_adult": 190.81
+            },
+            "Z_N2": {
+                "F_adult": 241.69,
+                "F_child": 152.56,
+                "F_middle_aged": 287.65,
+                "F_senior": 275.2,
+                "F_teenager": 156.5,
+                "F_young_adult": 207.09,
+                "M_adult": 270.68,
+                "M_child": 182.94,
+                "M_middle_aged": 300.87,
+                "M_senior": 258.75,
+                "M_teenager": 179.95,
+                "M_young_adult": 230.59
+            },
+            "Z_N3": {
+                "F_adult": 250.31,
+                "F_child": 122.44,
+                "F_middle_aged": 258.51,
+                "F_senior": 370.12,
+                "F_teenager": 301.75,
+                "F_young_adult": 289.15,
+                "M_adult": 260.28,
+                "M_child": 139.9,
+                "M_middle_aged": 249.74,
+                "M_senior": 212.9,
+                "M_teenager": 203.0,
+                "M_young_adult": 285.5
+            },
+            "Z_N4": {
+                "F_adult": 231.94,
+                "F_child": 335.0,
+                "F_middle_aged": 274.97,
+                "F_senior": 330.25,
+                "F_teenager": 134.67,
+                "F_young_adult": 240.56,
+                "M_adult": 227.23,
+                "M_child": 210.0,
+                "M_middle_aged": 301.1,
+                "M_senior": 169.33,
+                "M_teenager": 200.3,
+                "M_young_adult": 215.21
+            },
+            "Z_N5": {
+                "F_adult": 291.64,
+                "F_child": 142.12,
+                "F_middle_aged": 283.6,
+                "F_senior": 267.17,
+                "F_teenager": 203.22,
+                "F_young_adult": 189.91,
+                "M_adult": 263.85,
+                "M_child": 163.67,
+                "M_middle_aged": 283.8,
+                "M_senior": 248.81,
+                "M_teenager": 306.82,
+                "M_young_adult": 224.41
+            },
+            "Z_N6": {
+                "F_adult": 245.65,
+                "F_child": 270.38,
+                "F_middle_aged": 284.12,
+                "F_senior": 303.05,
+                "F_teenager": 182.12,
+                "F_young_adult": 226.52,
+                "M_adult": 222.14,
+                "M_child": 152.8,
+                "M_middle_aged": 261.26,
+                "M_senior": 241.92,
+                "M_teenager": 170.74,
+                "M_young_adult": 193.32
+            },
+            "Z_N7": {
+                "F_adult": 281.95,
+                "F_child": 163.25,
+                "F_middle_aged": 265.66,
+                "F_senior": 381.82,
+                "F_teenager": 173.17,
+                "F_young_adult": 217.93,
+                "M_adult": 204.67,
+                "M_child": 139.4,
+                "M_middle_aged": 261.4,
+                "M_senior": 289.25,
+                "M_teenager": 175.75,
+                "M_young_adult": 249.09
+            },
+            "Z_N8": {
+                "F_adult": 249.25,
+                "F_child": 183.5,
+                "F_middle_aged": 258.0,
+                "F_senior": 261.29,
+                "F_teenager": 239.31,
+                "F_young_adult": 219.08,
+                "M_adult": 257.54,
+                "M_child": 129.09,
+                "M_middle_aged": 273.32,
+                "M_senior": 180.62,
+                "M_teenager": 154.08,
+                "M_young_adult": 181.4
+            },
+            "Z_N9": {
+                "F_adult": 255.45,
+                "F_child": 178.78,
+                "F_middle_aged": 305.37,
+                "F_senior": 197.91,
+                "F_teenager": 208.17,
+                "F_young_adult": 240.81,
+                "M_adult": 243.54,
+                "M_child": 69.86,
+                "M_middle_aged": 281.91,
+                "M_senior": 223.1,
+                "M_teenager": 146.67,
+                "M_young_adult": 207.74
+            },
+            "Z_S1": {
+                "F_adult": 203.41,
+                "F_child": 137.4,
+                "F_middle_aged": 276.28,
+                "F_senior": 193.5,
+                "F_teenager": 186.5,
+                "F_young_adult": 194.92,
+                "M_adult": 186.0,
+                "M_child": 71.5,
+                "M_middle_aged": 223.63,
+                "M_senior": 166.29,
+                "M_teenager": 206.07,
+                "M_young_adult": 206.0
+            },
+            "Z_S2": {
+                "F_adult": 243.5,
+                "F_child": 223.0,
+                "F_middle_aged": 293.6,
+                "F_senior": 214.43,
+                "F_teenager": 233.0,
+                "F_young_adult": 224.33,
+                "M_adult": 225.0,
+                "M_child": 152.0,
+                "M_middle_aged": 287.62,
+                "M_senior": 198.8,
+                "M_teenager": 211.8,
+                "M_young_adult": 271.25
+            },
+            "Z_S3": {
+                "F_adult": 197.92,
+                "F_child": 69.0,
+                "F_middle_aged": 272.17,
+                "F_senior": 212.09,
+                "F_teenager": 177.5,
+                "F_young_adult": 130.2,
+                "M_adult": 239.33,
+                "M_child": 110.5,
+                "M_middle_aged": 293.93,
+                "M_senior": 310.83,
+                "M_teenager": 205.43,
+                "M_young_adult": 199.04
+            },
+            "Z_S4": {
+                "F_adult": 206.52,
+                "F_child": 129.0,
+                "F_middle_aged": 288.35,
+                "F_senior": 219.56,
+                "F_teenager": 201.67,
+                "F_young_adult": 135.91,
+                "M_adult": 226.09,
+                "M_child": 139.0,
+                "M_middle_aged": 315.0,
+                "M_senior": 322.5,
+                "M_teenager": 151.25,
+                "M_young_adult": 250.65
+            },
+            "Z_S5": {
+                "F_adult": 132.9,
+                "F_child": 71.0,
+                "F_middle_aged": 136.49,
+                "F_senior": 121.44,
+                "F_teenager": 124.8,
+                "F_young_adult": 128.21,
+                "M_adult": 117.28,
+                "M_child": 85.89,
+                "M_middle_aged": 131.09,
+                "M_senior": 118.44,
+                "M_teenager": 119.82,
+                "M_young_adult": 122.74
+            },
+            "Z_S6": {
+                "F_adult": 212.44,
+                "F_child": 46.5,
+                "F_middle_aged": 237.28,
+                "F_senior": 281.62,
+                "F_teenager": 179.83,
+                "F_young_adult": 214.08,
+                "M_adult": 277.43,
+                "M_child": 118.0,
+                "M_middle_aged": 249.0,
+                "M_senior": 136.33,
+                "M_teenager": 197.0,
+                "M_young_adult": 206.44
+            },
+            "Z_S7": {
+                "F_adult": 191.6,
+                "F_child": 127.75,
+                "F_middle_aged": 299.88,
+                "F_senior": 363.0,
+                "F_teenager": 125.0,
+                "F_young_adult": 174.83,
+                "M_adult": 168.62,
+                "M_middle_aged": 299.2,
+                "M_senior": 267.43,
+                "M_teenager": 163.25,
+                "M_young_adult": 227.86
+            }
+        }
+    },
+    "anomalias": [
+        {
+            "data": "2025-03-16",
+            "hora": "10h",
+            "zona": "Z_N5",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 2,
+            "media_historica": 6.7,
+            "desvio_padrao": 2.2
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "10h",
+            "zona": "Z_S2",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 4,
+            "media_historica": 1.2,
+            "desvio_padrao": 0.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "10h",
+            "zona": "Z_S6",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.2,
+            "desvio_padrao": 0.4
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "12h",
+            "zona": "Z_C2",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 149,
+            "media_historica": 136.3,
+            "desvio_padrao": 2.9
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_N1",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 4,
+            "media_historica": 8.0,
+            "desvio_padrao": 1.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_N5",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 11,
+            "media_historica": 4.2,
+            "desvio_padrao": 0.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_N6",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 14,
+            "media_historica": 3.8,
+            "desvio_padrao": 1.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_N7",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 7,
+            "media_historica": 3.2,
+            "desvio_padrao": 1.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_S1",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 1,
+            "media_historica": 2.4,
+            "desvio_padrao": 0.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_S4",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 6,
+            "media_historica": 1.8,
+            "desvio_padrao": 0.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "13h",
+            "zona": "Z_S7",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 2,
+            "media_historica": 1.2,
+            "desvio_padrao": 0.4
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "14h",
+            "zona": "Z_N1",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 10,
+            "media_historica": 6.7,
+            "desvio_padrao": 1.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "14h",
+            "zona": "Z_S4",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 4,
+            "media_historica": 1.4,
+            "desvio_padrao": 0.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "14h",
+            "zona": "Z_S5",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 1,
+            "media_historica": 2.8,
+            "desvio_padrao": 0.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "14h",
+            "zona": "Z_S6",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.3,
+            "desvio_padrao": 0.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "14h",
+            "zona": "Z_S7",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.5,
+            "desvio_padrao": 0.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "15h",
+            "zona": "Z_S2",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 5,
+            "media_historica": 2.0,
+            "desvio_padrao": 0.7
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "17h",
+            "zona": "Z_N6",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 2,
+            "media_historica": 4.8,
+            "desvio_padrao": 0.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "17h",
+            "zona": "Z_N9",
+            "tipo_anomalia": "Queda de Tráfego",
+            "visitantes_reais": 1,
+            "media_historica": 5.0,
+            "desvio_padrao": 1.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "18h",
+            "zona": "Z_S3",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 8,
+            "media_historica": 3.8,
+            "desvio_padrao": 1.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "18h",
+            "zona": "Z_S5",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 6,
+            "media_historica": 3.5,
+            "desvio_padrao": 1.2
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_N10",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 6,
+            "media_historica": 3.0,
+            "desvio_padrao": 0.7
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_N5",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 9,
+            "media_historica": 3.7,
+            "desvio_padrao": 1.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_N8",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 10,
+            "media_historica": 3.5,
+            "desvio_padrao": 1.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_S5",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 5,
+            "media_historica": 1.8,
+            "desvio_padrao": 0.4
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_S6",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.2,
+            "desvio_padrao": 0.4
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "19h",
+            "zona": "Z_S7",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.4,
+            "desvio_padrao": 0.5
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_C1",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 32,
+            "media_historica": 15.0,
+            "desvio_padrao": 4.8
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_C2",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 40,
+            "media_historica": 17.5,
+            "desvio_padrao": 5.9
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_CK",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 20,
+            "media_historica": 10.3,
+            "desvio_padrao": 4.0
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_E1",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 16,
+            "media_historica": 8.2,
+            "desvio_padrao": 2.6
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_E2",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 12,
+            "media_historica": 5.3,
+            "desvio_padrao": 2.9
+        },
+        {
+            "data": "2025-03-16",
+            "hora": "21h",
+            "zona": "Z_S4",
+            "tipo_anomalia": "Pico de Tráfego",
+            "visitantes_reais": 3,
+            "media_historica": 1.5,
+            "desvio_padrao": 0.7
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+# Dependências para o projeto TP1
+pandas==2.3.3
+requests==2.32.5
+networkx==3.6.1
+matplotlib==3.10.7
