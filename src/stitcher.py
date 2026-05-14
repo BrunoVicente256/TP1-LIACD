@@ -5,11 +5,7 @@ from collections import deque
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional
 
-# ==========================================
-# 1. ESTRUTURAS DE DADOS E ESTADO
-# ==========================================
-
-@dataclass
+@dataclass # Define a estrutura de dados para armazenar as trajetórias reconstruídas
 class Trajetoria:
     traj_id: str
     gender: str
@@ -22,18 +18,18 @@ class Trajetoria:
 
 _id_counter = 0
 
-def gerar_novo_id() -> str:
+def gerar_novo_id() -> str: # Gerador simples de IDs sequenciais para as trajetórias
     global _id_counter
     _id_counter += 1
     return f"P_{_id_counter:06d}"
 
-def entrada_na_loja(zone_id: str) -> bool:
+def entrada_na_loja(zone_id: str) -> bool: # Define quais zonas são consideradas entradas na loja
     return zone_id in ["Z_E1", "Z_E2"]
 
-def saida_da_loja(zone_id: str) -> bool:
+def saida_da_loja(zone_id: str) -> bool: # Define quais zonas são consideradas saídas da loja
     return zone_id in ["Z_E1", "Z_E2", "Z_CK", "Z_C1", "Z_C2", "Z_C3"]
 
-def carregar_grafo_reverso(caminho_json: str) -> dict:
+def carregar_grafo_reverso(caminho_json: str) -> dict: # Carrega o grafo de zonas e constrói uma estrutura de acesso reversa para facilitar a correspondência durante está fase
     grafo_reverso = {}
     with open(caminho_json, 'r', encoding='utf-8') as f:
         dados = json.load(f)
@@ -44,17 +40,13 @@ def carregar_grafo_reverso(caminho_json: str) -> dict:
             grafo_reverso[dest_zone][source_zone] = walk_secs
     return grafo_reverso
 
-def distancia_hamming(g1: str, a1: str, g2: str, a2: str) -> int:
+def distancia_hamming(g1: str, a1: str, g2: str, a2: str) -> int: # Calcula a distância de Hamming entre dois pares de género/faixa etária para avaliar similaridade demográfica
     dist = 0
     if g1 != g2: dist += 1
     if a1 != a2: dist += 1
     return dist
 
-# ==========================================
-# 3. MOTOR PRINCIPAL (STREAM PROCESSING)
-# ==========================================
-
-def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_transit_time_s: int = 300):
+def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_transit_time_s: int = 300): # Processa o stream de eventos, reconstruindo as trajetórias dos clientes com base nas regras definidas e utilizando as estruturas de dados para manter o estado atual dos clientes na loja
     in_zone: Dict[tuple, deque] = {}
     in_transit: Dict[tuple, deque] = {}
     transit_timeout_queue = deque()  # Fila TTL (Time-To-Live) para garantir O(1) na limpeza
@@ -71,14 +63,11 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
             current_time = datetime.fromisoformat(ts_str)
             duration_s = int(duration_s)
 
-            # ---------------------------------------------------------
-            # 1. GARBAGE COLLECTOR O(1) - Processar expirados no trânsito
-            # ---------------------------------------------------------
-            while transit_timeout_queue:
+            while transit_timeout_queue: 
                 tempo_zombie, zombie = transit_timeout_queue[0]
                 if (current_time - tempo_zombie).total_seconds() > max_transit_time_s:
                     transit_timeout_queue.popleft()
-                    # Só avaliamos se ele NÃO foi resgatado entretanto
+                    # Só avaliamos se ele não foi resgatado entretanto
                     if zombie.status == "in_transit":
                         zombie.end_time = zombie.last_timestamp.isoformat()
                         ultima_zona = zombie.path[-1]["zone_id"]
@@ -91,12 +80,9 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                 else:
                     break
 
-            # ---------------------------------------------------------
-            # 2. PROCESSAR EVENTO ATUAL
-            # ---------------------------------------------------------
             if event_type == 'entry':
                 if entrada_na_loja(zone_id):
-                    # Nasce da rua
+                    # Novo cliente
                     nova_traj = Trajetoria(
                         traj_id=gerar_novo_id(), gender=gender, age_range=age_range, start_time=current_time.isoformat()
                     )
@@ -112,7 +98,7 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                     origens_possiveis = zonas_grafo_reverso.get(zone_id, {})
                     TOLERANCIA_S = 10
 
-                    # --- FAST PATH ---
+                    # Fast path (Usado quando temos um candidato perfeito: mesma origem, mesmo género, mesma faixa etária e tempo de caminhada compatível)
                     for source_zone, walk_seconds in origens_possiveis.items():
                         chave_transito = (source_zone, gender, age_range)
                         fila_transito = in_transit.get(chave_transito)
@@ -131,7 +117,7 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                                 else: break
                         if candidato_encontrado: break
 
-                    # --- MEDIUM PATH ---
+                    # Medium path (Erro de sensor na câmara, tentar resgatar quem está em trânsito próximo)
                     if not candidato_encontrado:
                         for source_zone, walk_seconds in origens_possiveis.items():
                             for chave_t, fila_t in list(in_transit.items()):
@@ -154,12 +140,12 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                                     if candidato_encontrado: break
                             if candidato_encontrado: break
 
-                    # --- SLOW PATH ---
+                    # Slow path (Usado em último recurso: tentar resgatar qualquer um do mesmo género/faixa etária que esteja em trânsito, mesmo sem correspondência de zona de origem)
                     if not candidato_encontrado:
                         for chave_transito, fila_transito in list(in_transit.items()):
                             sz, g, a = chave_transito
                             
-                            # PROTEÇÃO ANTI-ROUBO: Não roubar quem já saiu pelas portas/caixas!
+                            # Forma de não roubar quem já saiu pelas portas/caixas
                             if saida_da_loja(sz): 
                                 continue
                                 
@@ -179,9 +165,9 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                                         break
                                 if candidato_encontrado: break
 
-                    # --- ATUALIZAR ESTADO ---
+                    # Se encontramos um candidato, reativamos a sua trajetória e atualizamos o caminho. Caso contrário, criamos uma nova trajetória (possível anomalia de entrada sem trânsito prévio)
                     if candidato_encontrado:
-                        candidato_encontrado.status = "active" # Ressuscita!
+                        candidato_encontrado.status = "active" # Reativar cliente que estava em trânsito
                         candidato_encontrado.last_timestamp = current_time
                         candidato_encontrado.path.append({"zone_id": zone_id, "entry_time": current_time.isoformat(), "total_linger_s": 0})
                         chave = (zone_id, candidato_encontrado.gender, candidato_encontrado.age_range)
@@ -246,10 +232,10 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                     if chave_transito not in in_transit: in_transit[chave_transito] = deque()
                     in_transit[chave_transito].append(cliente)
                     
-                    # Adiciona à fila de TTL (Time-To-Live) para garantir que expira passados 300s
+                    # Adiciona à fila de timeout para garantir que clientes que ficam em trânsito sejam eventualmente limpos
                     transit_timeout_queue.append((current_time, cliente))
 
-    # ACTIVE SWEEP FINAL (Limpar quem ficou na loja na hora de fecho)
+    # Active sweep final (Limpeza de quem ficou na loja depois do fecho)
     for fila in in_zone.values():
         while fila:
             cliente = fila.popleft()
@@ -276,10 +262,6 @@ def processar_stream_eventos(caminho_csv: str, zonas_grafo_reverso: dict, max_tr
                 trajetorias_incompletas.append(cliente)
 
     return trajetorias_completas, trajetorias_incompletas
-
-# ==========================================
-# 4. PÓS-PROCESSAMENTO E EXPORTAÇÃO
-# ==========================================
 
 def sanitizar_trajetorias(trajetorias: List[Trajetoria]) -> List[Trajetoria]:
     for traj in trajetorias:
@@ -350,9 +332,6 @@ def exportar_journeys_csv(trajetorias: List[Trajetoria], filepath: str = "journe
                     traj.gender, traj.age_range, visit_date, hour_of_day
                 ])
 
-# ==========================================
-# EXECUÇÃO PRINCIPAL
-# ==========================================
 if __name__ == "__main__":
     import time
     import argparse
@@ -397,7 +376,6 @@ if __name__ == "__main__":
     print(f"Trajetórias Completas: {len(completas)}")
     print(f"Trajetórias Incompletas/Anomalias: {len(incompletas)}")
 
-    # Guardar estatísticas de saúde para o relatório final
     stats_path = os.path.join(root_dir, "output", "stitching_stats.json")
     with open(stats_path, 'w', encoding='utf-8') as f:
         json.dump({

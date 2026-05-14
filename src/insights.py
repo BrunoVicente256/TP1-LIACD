@@ -3,10 +3,6 @@ import requests
 import os
 import argparse
 
-# ==========================================
-# 1. CONFIGURAÇÃO E PROMPTS DE SISTEMA
-# ==========================================
-
 SYSTEM_PROMPT = """
 És um Analista Sénior de Retalho com especialização em Business Intelligence. 
 O teu objetivo é transformar métricas frias em decisões de gestão estratégicas.
@@ -48,10 +44,6 @@ FEW_SHOT_EXAMPLES = [
     }
 ]
 
-# ==========================================
-# 2. FUNÇÕES DE COMUNICAÇÃO E PARSING
-# ==========================================
-
 def call_ollama(prompt, model="llama3.1:8b"):
     """Envia a prompt para o Ollama local e extrai a resposta JSON."""
     url = "http://localhost:11434/api/generate"
@@ -89,7 +81,6 @@ def limpar_json(texto_bruto):
 def montar_prompt(metrics_data):
     """Constrói a prompt final usando a estratégia Few-Shot."""
     
-    # Extrair destaques para não sobrecarregar a janela de contexto
     taxa_conv = metrics_data['funil']['taxa_conversao_percentagem']
     anomalias = metrics_data['anomalias']
     perfil_churn = metrics_data['funil']['perfil_abandono']
@@ -118,12 +109,7 @@ A resposta deve começar com {{ e acabar com }}.
 """
     return prompt
 
-# ==========================================
-# 3. EXECUÇÃO PRINCIPAL
-# ==========================================
-
 if __name__ == "__main__":
-    # Caminhos seguros
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(script_dir)
     
@@ -151,7 +137,6 @@ if __name__ == "__main__":
     texto_limpo = limpar_json(raw_response)
 
     try:
-        # Validar se o LLM gerou um JSON perfeito
         json_response = json.loads(texto_limpo)
         
         os.makedirs(os.path.dirname(args.output) if os.path.dirname(args.output) else ".", exist_ok=True)

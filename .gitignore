@@ -1,13 +1,10 @@
-# Ambientes Virtuais
 .venv/
 venv/
 env/
 
-# Ficheiros temporários do Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Ficheiros de sistema
 .DS_Store
 Thumbs.db

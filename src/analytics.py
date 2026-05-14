@@ -3,8 +3,7 @@ import argparse
 import pandas as pd
 import json
 
-def calcular_metricas_trafego(df: pd.DataFrame) -> dict:
-    """Calcula as métricas globais de tráfego da loja."""
+def calcular_metricas_trafego(df: pd.DataFrame) -> dict: # Calcula as métricas globais de tráfego da loja
     
     visitantes_dia_hora = df.groupby(['visit_date', 'hour_of_day'])['person_id'].nunique().reset_index()
     
@@ -36,8 +35,7 @@ def calcular_metricas_trafego(df: pd.DataFrame) -> dict:
         "afluencia_diaria": trafego_diario
     }
 
-def calcular_funil_cliente(df: pd.DataFrame) -> dict:
-    """Calcula as métricas de conversão e abandono."""
+def calcular_funil_cliente(df: pd.DataFrame) -> dict: # Calcula as métricas de conversão e abandono
     
     total_visitantes = df['person_id'].nunique()
     
@@ -69,8 +67,7 @@ def calcular_funil_cliente(df: pd.DataFrame) -> dict:
         "perfil_abandono": perfil_abandono
     }
 
-def calcular_metricas_zonas(df: pd.DataFrame) -> dict:
-    """Calcula estatísticas de permanência e navegação por zona."""
+def calcular_metricas_zonas(df: pd.DataFrame) -> dict: # calcula as métricas de permanência e navegação por zona
     
     df_sorted = df.sort_values(by=['person_id', 'entry_time'])
 
@@ -95,8 +92,7 @@ def calcular_metricas_zonas(df: pd.DataFrame) -> dict:
         "top_10_rotas_frequentes": top_caminhos
     }
 
-def calcular_segmentacao(df: pd.DataFrame) -> dict:
-    """Calcula a distribuição demográfica da loja conforme exigido no guião."""
+def calcular_segmentacao(df: pd.DataFrame) -> dict: # Calcula a distribuição demográfica da loja conforme exigido no guião.
     
     df_hora = df.drop_duplicates(subset=['person_id', 'hour_of_day'])
     dist_hora = df_hora.groupby(['hour_of_day', 'gender', 'age_range']).size().reset_index(name='count')
@@ -125,8 +121,7 @@ def calcular_segmentacao(df: pd.DataFrame) -> dict:
         "dwell_medio_por_segmento_e_zona": dwell_por_zona
     }
 
-def calcular_anomalias(df: pd.DataFrame) -> list:
-    """Deteta anomalias no Dia 7 usando a Regra dos 2 Sigmas sobre o histórico."""
+def calcular_anomalias(df: pd.DataFrame) -> list: # Deteta anomalias no Dia 7 usando a Regra dos 2 Sigmas sobre o histórico
     
     dias_ordenados = sorted(df['visit_date'].unique())
     if len(dias_ordenados) < 7:
