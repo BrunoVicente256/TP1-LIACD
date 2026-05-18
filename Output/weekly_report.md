@@ -1,17 +1,17 @@
-# Relatório Semanal de Performance de Retalho
-**Data de Emissão:** 12/05/2026
+# Relatório Semanal da Performance da Loja
+**Data de Emissão:** 15/05/2026
 **Modelo Analítico:** Llama 3.1:8b (Estratégia Few-Shot)
 
 ---
 
 ## Mapa de Fluxo e Topologia
-A análise abaixo baseia-se na configuração física da loja. Os corredores de navegação (`Z_N`) servem como eixos centrais de tráfego, enquanto as secções de produtos (`Z_S`) funcionam como pontos de paragem.
+A análise abaixo é uma projeção da configuração física da loja, feita com os dados fornecidos para o desenvolviemento do sistema de monitorização. Os corredores de navegação (`Z_N`) servem como eixos centrais de tráfego, enquanto as secções de produtos (`Z_S`) funcionam como pontos de paragem.
 
 ![Topologia da Loja](topologia_loja.png)
 
 ---
 
-## 1. Resumo Executivo (AI Generated)
+## Resumo Executivo
 - A loja registrou uma taxa de conversão de 99,1%, indicando que a maioria dos clientes está realizando compras.
 - As zonas Z_S3 e Z_N5 apresentaram anomalias de afluência, com números significativamente acima da média.
 - É recomendável reforçar a reposição entre as 17h e as 19h nas zonas afetadas.
@@ -19,19 +19,19 @@ A análise abaixo baseia-se na configuração física da loja. Os corredores de 
 ---
 
 ## Saúde dos Dados e Qualidade do Sistema
-*Esta secção avalia a fiabilidade das métricas apresentadas com base no ruído capturado pelos sensores.*
+*Nesta secção temos uma avaliação da fiabilidade das métricas apresentadas com base no ruído capturado pelos sensores.*
 
 | Indicador de Qualidade | Valor | Estado |
 | :--- | :--- | :--- |
 | **Trajetórias Reconstruídas** | 10583 | OK |
-| **Anomalias/Zombies Detetados** | 5849 | Ruído |
+| **Anomalias** | 5849 | Ruído |
 | **Taxa de Integridade do Sinal** | 64.4% | Moderada |
 
-> **Nota Técnica:** O volume de anomalias reflete eventos de "Ping-Pong" filtrados e trajetórias fragmentadas por oclusão visual. Uma taxa acima de 60% é considerada excelente para ambientes de visão computacional em tempo real.
+> **Nota Técnica:** Este número de anomalias reflete eventos onde as trajetórias são fragmentadas por oclusão visual. A taxa de 60% para cima é considerada excelente para ambientes deste tipo.
 
 ---
 
-## 2. Métricas Globais de Tráfego
+## Métricas Globais de Tráfego
 | Métrica | Valor |
 | :--- | :--- |
 | **Total de Visitantes** | 10583 |
@@ -52,13 +52,13 @@ A análise abaixo baseia-se na configuração física da loja. Os corredores de 
 
 ---
 
-## 3. Análise do Funil e Abandono
+## Análise de Abandonos e Perdas
 - **Perfil Dominante de Abandono:** F (adult)
 - **Total de Potenciais Clientes Perdidos:** 95
 
 ---
 
-## 4. Insights Estratégicos (Deep Analysis)
+## Insights Estratégicos
 
 ### Anomalia de Afluência em Z_S3
 - **ID:** `INS_EX_01` | **Urgência:** ESTA_SEMANA
@@ -96,4 +96,4 @@ A análise abaixo baseia-se na configuração física da loja. Os corredores de 
 ---
 
 
-*Relatório gerado automaticamente pelo Sistema de Monitorização de Trajetórias TP1.*
+*Relatório gerado automaticamente pelo Sistema de Monitorização de Trajetórias.*

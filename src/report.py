@@ -15,38 +15,38 @@ def gerar_markdown(metrics, insights, health, img_path):
     
     img_rel_path = os.path.basename(img_path)
 
-    md = f"""# Relatório Semanal de Performance de Retalho
+    md = f"""# Relatório Semanal da Performance da Loja
 **Data de Emissão:** {data_relatorio}
 **Modelo Analítico:** Llama 3.1:8b (Estratégia Few-Shot)
 
 ---
 
 ## Mapa de Fluxo e Topologia
-A análise abaixo baseia-se na configuração física da loja. Os corredores de navegação (`Z_N`) servem como eixos centrais de tráfego, enquanto as secções de produtos (`Z_S`) funcionam como pontos de paragem.
+A análise abaixo é uma projeção da configuração física da loja, feita com os dados fornecidos para o desenvolviemento do sistema de monitorização. Os corredores de navegação (`Z_N`) servem como eixos centrais de tráfego, enquanto as secções de produtos (`Z_S`) funcionam como pontos de paragem.
 
 ![Topologia da Loja]({img_rel_path})
 
 ---
 
-## 1. Resumo Executivo (AI Generated)
+## Resumo Executivo
 {chr(10).join([f"- {item}" for item in insights.get('resumo_executivo', [])]) if insights else "- Dados de insights não disponíveis."}
 
 ---
 
 ## Saúde dos Dados e Qualidade do Sistema
-*Esta secção avalia a fiabilidade das métricas apresentadas com base no ruído capturado pelos sensores.*
+*Nesta secção temos uma avaliação da fiabilidade das métricas apresentadas com base no ruído capturado pelos sensores.*
 
 | Indicador de Qualidade | Valor | Estado |
 | :--- | :--- | :--- |
 | **Trajetórias Reconstruídas** | {health.get('trajetorias_sucesso', 0) if health else 'N/A'} | OK |
-| **Anomalias/Zombies Detetados** | {health.get('trajetorias_anomalas', 0) if health else 'N/A'} | Ruído |
+| **Anomalias** | {health.get('trajetorias_anomalas', 0) if health else 'N/A'} | Ruído |
 | **Taxa de Integridade do Sinal** | {health.get('taxa_integridade', 0) if health else 'N/A'}% | { 'Alta' if health and health['taxa_integridade'] > 80 else 'Moderada' } |
 
-> **Nota Técnica:** O volume de anomalias reflete eventos de "Ping-Pong" filtrados e trajetórias fragmentadas por oclusão visual. Uma taxa acima de 60% é considerada excelente para ambientes de visão computacional em tempo real.
+> **Nota Técnica:** Este número de anomalias reflete eventos onde as trajetórias são fragmentadas por oclusão visual. A taxa de 60% para cima é considerada excelente para ambientes deste tipo.
 
 ---
 
-## 2. Métricas Globais de Tráfego
+## Métricas Globais de Tráfego
 | Métrica | Valor |
 | :--- | :--- |
 | **Total de Visitantes** | {metrics['funil']['total_visitantes_loja']} |
@@ -64,13 +64,13 @@ A análise abaixo baseia-se na configuração física da loja. Os corredores de 
     md += f"""
 ---
 
-## 3. Análise do Funil e Abandono
+## Análise de Abandonos e Perdas
 - **Perfil Dominante de Abandono:** {metrics['funil']['perfil_abandono'].get('genero_maioritario', 'N/A')} ({metrics['funil']['perfil_abandono'].get('idade_maioritaria', 'N/A')})
 - **Total de Potenciais Clientes Perdidos:** {metrics['funil']['perfil_abandono'].get('total_perdidos', 0)}
 
 ---
 
-## 4. Insights Estratégicos (Deep Analysis)
+## Insights Estratégicos
 """
     if insights:
         for ins in insights.get('insights', []):
@@ -83,7 +83,7 @@ A análise abaixo baseia-se na configuração física da loja. Os corredores de 
 ---
 """
 
-    md += f"\n\n*Relatório gerado automaticamente pelo Sistema de Monitorização de Trajetórias TP1.*"
+    md += f"\n\n*Relatório gerado automaticamente pelo Sistema de Monitorização de Trajetórias.*"
     return md
 
 if __name__ == "__main__":

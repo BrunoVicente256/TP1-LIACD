@@ -1,7 +1,6 @@
 ## Pipeline
 
 ```bash
-cd tp1 LIACD N55300
 pip install -r requirements.txt
 ollama pull llama3.1:8b
 python src/visualizacao.py --input data/zones.json --output output/topologia_loja.png
